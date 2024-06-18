@@ -25,7 +25,7 @@ function ThreeDRoad()
   });
 
   var city_BG_clouds;
-  loadImage('assets/city_BG_Cloud.png', img => {
+  loadImage('assets/city_bg_cloud.png', img => {
     city_BG_clouds = img;
   });
 
