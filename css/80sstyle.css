@@ -1,0 +1,279 @@
+/* CSS Document */
+
+body{
+    margin: 0;
+    line-height:1.6;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: rgb(4, 4, 4);
+}
+
+.banner-home{
+    background-image:  url("../images/banner3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-size:cover; */
+    background-position: center;
+    /* background-position:top; */
+    border-style: none;
+    /*Trick to make the banner scale properly: image height/image width = padding-top
+    Need to know the size of the image beforehand...There is probably an easier/better way to do this.
+    https://stackoverflow.com/a/22211990  */
+    padding-top: 20%;
+    width: 100%;
+    height: 0;
+
+}
+
+/* This overlays the first image on the second so the banner shows which page the user is on */
+.movies-home{
+    background-image: url("../images/movies_banner.png"),  url("../images/banner2.png");
+}
+.cartoons-home{
+    background-image: url("../images/cartoons_banner.png"),  url("../images/banner2.png");
+}
+.games-home{
+    background-image: url("../images/games_banner.png"),  url("../images/banner2.png");
+}
+.music-home{
+    background-image: url("../images/music_banner.png"),  url("../images/banner2.png");
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    /* color:indigo; */
+    color: #D7D9CE;
+    /* background-color: #ff7aac; */
+    background-color: #13505B;
+    display: block;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin-bottom: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+nav ul li a:hover{
+    /* background-color:rgb(105, 165, 255); */
+    background-color: #119DA4;
+}
+
+nav ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+p{
+    /* font-weight: bold; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    text-align: start;
+    position:relative;
+    top:-35px;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 1px black;
+}
+
+h2{
+    font-size: 1.8em;
+    color: #D7D9CE;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 2px black;
+}
+
+.feature-images{
+    padding-top: 20px;
+    background-color: palevioletred;
+    background: linear-gradient(0deg,palevioletred, rgb(219, 164, 183) );
+}
+
+.image-one{
+    padding: 0 20px;  
+    /* padding-top: 50px; */
+    color: rgb(0, 0, 0);
+} 
+.image-one img{
+    border-radius: 15px;
+}
+
+/* The flex-direction for article-*-home gets changed to row if the screen is wide enough: See @media section   */
+
+/* MARK: article one */
+
+.article-one-home{
+    background-color: rgb(59, 149, 172);
+    /* background: linear-gradient(0deg, rgb(109, 161, 175),rgb(59, 149, 174), rgb(59, 149, 174),rgb(109, 161, 175)) ; */
+    background: linear-gradient(0deg, #119DA4,#0C7489, #0C7489, #0C7489, #119DA4) ;
+    
+    padding: 0 20px;
+    /* color: rgb(253, 241, 226); */
+    color: #D7D9CE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+.article-one-home-img{
+    background-position: center;
+    padding: 10px 20px;
+    /* filter: drop-shadow(5px 5px 10px rgb(6, 19, 38)); */
+    filter: drop-shadow(-5px 5px 10px rgb(150, 174, 175))
+
+}
+.article-one-home p{
+    color:rgb(236, 225, 211);
+    text-shadow: 1px 1px 1px darkslateblue;
+
+}
+.article-one-home-img img, 
+.article-two-home-img img,
+.article-three-home-img img {
+    border-radius: 5px;
+ 
+}
+
+.article-two-home{
+    background-color: rgb(150, 59, 172);
+    /* background: linear-gradient(180deg,   rgb(158, 104, 172), rgb(150, 59, 172));
+     */
+    background: linear-gradient(0deg, #0C7489,#13505B, #13505B, #13505B,  #0C7489) ;
+  
+
+
+    padding: 0 20px;
+    /* color: rgb(252, 249, 222); */
+    color: #D7D9CE;
+    height: auto;
+    align-items: center; 
+    display: flex; 
+    flex-direction: column-reverse; /* Change direction so the img is drawn about the text */
+}
+
+.article-two-home-img{
+    width: 100%;
+    background-position: center;
+    padding: 10px 20px;
+    order: 2; /* Change the order so the text is placed to the left of the image */
+    filter: drop-shadow(-5px 5px 10px rgb(103, 120, 147))
+}
+
+.article-three-home{
+    background-color: rgb(136, 211, 167);
+    background: linear-gradient(0deg, rgb(136, 211, 167), rgb(111, 207, 150));
+    padding: 0 20px;
+    height: auto;
+    color: rgb(15, 0, 149);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-three-home-img{
+    width: 490px;
+    height: auto;
+    background-position: center;
+    padding: 10px 20px;
+}
+
+.article-text{
+    display: flex;
+    flex-direction: column;
+}
+.article-text h2{
+    text-align: center;
+}
+
+.article-two-text, .article-text{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+.page-wrapper{
+    max-width: 1400px;
+    margin: auto;
+    /* background-color: #b4dfdc; */
+    background-color: #D7D9CE;
+    border-style:none;
+}
+
+/* Carousel */
+
+.carousel-container{
+    width: 490px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.carousel-slider{
+    display: flex;
+    width: 100%;
+    height: 250px;
+}
+
+#prevButton{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    z-index: 10;
+    text-decoration: none;
+    border: none;
+    background: url("../images/LeftArrow.svg") no-repeat;
+    opacity: 50%;   
+}
+
+#nextButton {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    z-index: 10;
+    text-decoration: none;
+    border: none;
+    background: url("../images/RightArrow.svg") no-repeat;
+    opacity: 50%;
+}
+
+
+/* The dafault is to draw the mobile version, if we have a wider screen the elements are changed to the desktop layout. */
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+    nav ul li{
+        flex: 1;
+        margin: 5px;
+    }
+    .feature-images{
+        display: flex;
+    }
+    .image-one{
+        flex: 1;
+    }
+    .article-one-home{
+        flex-direction: row;
+    }
+    .article-two-home{
+        flex-direction: row;
+    }
+    .article-three-home{
+        flex-direction: row;
+    }
+    .article-one-home-img{
+        flex: 1;
+    }
+    .article-text{
+        flex: 1;
+    }
+}
