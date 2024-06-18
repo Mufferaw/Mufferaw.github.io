@@ -1,0 +1,3 @@
+# Ignore the "folder-name" folder
+.history/
+.vscode/
